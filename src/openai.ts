@@ -49,8 +49,8 @@ async function chatgpt(username:string,message: string): Promise<string> {
 async function dalle(username:string,prompt: string) {
   const response = await openai.createImage({
     prompt: prompt,
-    n:4,
-    size: CreateImageRequestSizeEnum._256x256,
+    n:1,
+    size: CreateImageRequestSizeEnum._1024x1024,
     response_format: CreateImageRequestResponseFormatEnum.Url,
     user: username
   }).then((res) => res.data).catch((err) => console.log(err));
